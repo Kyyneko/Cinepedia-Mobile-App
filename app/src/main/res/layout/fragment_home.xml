@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label_coming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_marginHorizontal="15dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginVertical="15dp"
+                android:text="Coming Soon Movie">
+            </TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_coming_soon"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/label_coming"
+                android:layout_margin="8dp"
+                android:orientation="horizontal" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_category_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp"
+                android:gravity="center">
+
+                <!-- Trending Button -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    android:backgroundTint="#5483B3"
+                    android:layout_margin="4dp">
+
+                    <Button
+                        android:id="@+id/button_trending"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Trending
+                        Movie"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:backgroundTint="#5483B3"
+                        android:padding="5dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Top Rated Button -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    android:backgroundTint="#5483B3"
+                    android:layout_margin="4dp">
+
+                    <Button
+                        android:id="@+id/button_top_rated"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Top
+                        Movie"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="#5483B3"
+                        android:textStyle="bold"
+                        android:padding="5dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Upcoming Button -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    android:backgroundTint="#5483B3"
+                    android:layout_margin="4dp">
+
+                    <Button
+                        android:id="@+id/button_upcoming"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Coming
+                        Soon"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:backgroundTint="#5483B3"
+                        android:padding="5dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Now Playing Button -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    android:backgroundTint="#5483B3"
+                    android:layout_margin="4dp">
+
+                    <Button
+                        android:id="@+id/button_playing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="New
+                        Release"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:backgroundTint="#5483B3"
+                        android:padding="5dp" />
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="All Movies"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="15dp"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_marginVertical="15dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_movies"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

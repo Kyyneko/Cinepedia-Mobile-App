@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/background_gradient"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#132D46"
+            app:titleTextColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            android:background="#696E79"/>
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible"
+            tools:ignore="MissingClass" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_marginHorizontal="15dp"
+            android:backgroundTint="#052659"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/poster_image"
+                    android:layout_width="90dp"
+                    android:layout_height="140dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true" />
+
+                <ImageView
+                    android:id="@+id/no_poster_image"
+                    android:layout_width="90dp"
+                    android:layout_height="140dp"
+                    android:visibility="gone"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/no_poster">
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:text="Movie Title"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:id="@+id/runtime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Runtime"
+                        android:textColor="@color/white_smoke"
+                        android:layout_marginBottom="5dp" />
+                    <TextView
+                        android:id="@+id/release_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Release"
+                        android:textColor="@color/white_smoke"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:id="@+id/genres"
+                        android:layout_width="match_parent"
+                        android:text="Genre"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/floral_white"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:id="@+id/rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rating"
+                        android:textColor="@color/green"
+                        android:layout_marginBottom="5dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/add_to_watchlist_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add To Watch List"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/green"
+            android:visibility="gone"
+            android:layout_marginHorizontal="15dp"/>
+
+        <Button
+            android:id="@+id/delete_to_watchlist_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete To Watch List"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/red"
+            android:visibility="gone"
+            android:layout_marginHorizontal="15dp"/>
+
+
+        <TextView
+            android:id="@+id/overview"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="afdaewfaefabasjkbgfjkabfkasfwakfhvawkhvfkhv"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="visible"
+            android:layout_marginBottom="16dp" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_marginHorizontal="15dp"
+            android:backgroundTint="#5483B3"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:textColor="@color/bluee"
+                    android:layout_marginBottom="5dp" />
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:textColor="@color/white"
+                     />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Language"
+                    android:textColor="@color/bluee"
+                    android:layout_marginBottom="5dp" />
+                <TextView
+                    android:id="@+id/original_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ori Lang"
+                    android:textColor="@color/white" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="10dp"/>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Production Companies"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/bluee"
+                    android:layout_marginBottom="5dp" />
+                <TextView
+                    android:id="@+id/production_companies"
+                    android:layout_width="match_parent"
+                    android:text="Production Companies"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="10dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Production Countries"
+                    android:textColor="@color/bluee"
+                    android:layout_marginBottom="5dp" />
+                <TextView
+                    android:id="@+id/production_countries"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Production Countries"
+                    android:textColor="@color/white" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="10dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/bluee"
+                    android:text="Homepage"
+                    android:layout_marginBottom="5dp" />
+                <TextView
+                    android:id="@+id/homepage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Homepage"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Tagline"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/bluee"
+                    android:layout_marginBottom="5dp" />
+                <TextView
+                    android:id="@+id/tagline"
+                    android:layout_width="match_parent"
+                    android:text="Tagline"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/noBackdrops_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:src="@drawable/no_poster"
+            android:scaleType="centerCrop"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/backdrops_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent"/>
+
+
+        <!-- Tambahkan RecyclerView untuk saran film -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recommended Movies"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="15dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_marginHorizontal="15dp"
+            android:backgroundTint="#696E79"
+            app:cardElevation="8dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommended_movies_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#696E79"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/floral_white"
+                android:padding="5dp"
+                android:scrollbars="vertical" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
