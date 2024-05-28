@@ -9,13 +9,10 @@ public class Genre {
     @SerializedName("name")
     private String name;
 
-    @SerializedName("imageUrl")
-    private String imageUrl;
 
-    public Genre(int id, String name, String imageUrl) {
+    public Genre(int id, String name) {
         this.id = id;
         this.name = name;
-        this.imageUrl = imageUrl;
     }
 
     public int getId() {
@@ -33,12 +30,5 @@ public class Genre {
     public void setName(String name) {
         this.name = name;
     }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
 }
+

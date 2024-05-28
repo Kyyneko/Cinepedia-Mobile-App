@@ -200,16 +200,33 @@ public class MovieDetailsActivity extends AppCompatActivity {
                         title.setText(movie.getTitle());
                         overview.setText(movie.getOverview());
 
-                        // Mengubah format tanggal
-                        @SuppressLint("SimpleDateFormat") SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-                        @SuppressLint("SimpleDateFormat") SimpleDateFormat outputFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
-                        try {
-                            Date date = inputFormat.parse(movie.getReleaseDate());
-                            String formattedDate = outputFormat.format(date);
-                            releaseDate.setText("Release Date : " + formattedDate);
-                        } catch (ParseException e) {
-                            e.printStackTrace();
-                            releaseDate.setText("Release Date : " + movie.getReleaseDate());
+
+
+                        Boolean adult = movie.isAdult();
+                        if (adult) {
+                            // Mengubah format tanggal
+                            @SuppressLint("SimpleDateFormat") SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                            @SuppressLint("SimpleDateFormat") SimpleDateFormat outputFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+                            try {
+                                Date date = inputFormat.parse(movie.getReleaseDate());
+                                String formattedDate = outputFormat.format(date);
+                                releaseDate.setText("Release Date : " + formattedDate);
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                                releaseDate.setText("Release Date : " + movie.getReleaseDate() + "18+ Content");
+                            }
+                        } else {
+                            // Mengubah format tanggal
+                            @SuppressLint("SimpleDateFormat") SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                            @SuppressLint("SimpleDateFormat") SimpleDateFormat outputFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+                            try {
+                                Date date = inputFormat.parse(movie.getReleaseDate());
+                                String formattedDate = outputFormat.format(date);
+                                releaseDate.setText("Release Date : " + formattedDate);
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                                releaseDate.setText("Release Date : " + movie.getReleaseDate());
+                            }
                         }
 
                         // Menampilkan rating dengan format yang diinginkan

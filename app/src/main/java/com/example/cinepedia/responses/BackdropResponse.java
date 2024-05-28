@@ -12,8 +12,4 @@ public class BackdropResponse {
     public List<Backdrop> getBackdrops() {
         return backdrops;
     }
-
-    public void setBackdrops(List<Backdrop> backdrops) {
-        this.backdrops = backdrops;
-    }
 }
