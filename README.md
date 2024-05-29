@@ -1,10 +1,11 @@
-# Cinepedia
+# Cinepedia-Mobile_App
 
 NAMA : MAHENDRA KIRANA M.B
 NIM : H071221058
 KELAS : D
 
-- Cinepedia-Mobile-App adalah sebuah aplikasi android yang dirancang untuk memudahkan para user penikmat film di seluruh dunia untuk mendapatkan akses info film dengan mudah
+- Cinepedia-Mobile-App adalah sebuah aplikasi android yang dirancang untuk memudahkan 
+- para user penikmat film dan tv show untuk mendapatkan akses info film dan tv show dengan mudah
 
 | Fitur Fitur Aplikasi |
 
@@ -17,7 +18,7 @@ KELAS : D
 7. Show Popular Tv Show ✅
 8. Profile Account ✅
 9. Add Watchlist ✅
-10. Searching Movie Berdasarkan Title ✅
+10. Searching Movie ✅
 11. Show Detail Movie ✅
 12. Show Trailer Movie ✅
 13. CRUD Profile Account Users ✅
@@ -33,7 +34,6 @@ KELAS : D
 6. Networking ✅
    - API TMDB ✅
 7. Local Data Persistent : ✅
-
    - SQLite Database ->
      Table Users : - id - username - password - email - phone number - profile_photo
      Table Watchlist : - id - user_id references id (table Users) - movie_id - title - poster_path

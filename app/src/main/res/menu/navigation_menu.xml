@@ -11,7 +11,7 @@
             android:title=""/>
         <item
             android:id="@+id/menu_favorite"
-            android:icon="@drawable/soon"
+            android:icon="@drawable/tv_show"
             android:title="" />
         <item
             android:id="@+id/menu_profile"
