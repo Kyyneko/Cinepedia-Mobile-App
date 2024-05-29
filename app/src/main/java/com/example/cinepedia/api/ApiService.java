@@ -44,12 +44,6 @@ public interface ApiService {
             @Query("page") int page
     );
 
-    @GET("genre/movie/list")
-    Call<GenreResponse> getGenres(
-            @Query("api_key") String apiKey,
-            @Query("language") String language
-    );
-
     @GET("trending/movie/{time_window}")
     Call<MovieResponse> getTrendingMovies(
             @Path("time_window") String timeWindow,
