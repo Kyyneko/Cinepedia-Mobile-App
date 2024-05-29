@@ -1,4 +1,8 @@
-# Cinepedia-Mobile-App
+# Cinepedia
+
+NAMA : MAHENDRA KIRANA M.B
+NIM : H071221058
+KELAS : D
 
 - Cinepedia-Mobile-App adalah sebuah aplikasi android yang dirancang untuk memudahkan para user penikmat film di seluruh dunia untuk mendapatkan akses info film dengan mudah
 

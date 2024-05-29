@@ -188,9 +188,7 @@ public class HomeFragment extends Fragment {
     private void checkForEmptyList() {
         new Thread(() -> {
             if (movieList.isEmpty()) {
-                new Handler(Looper.getMainLooper()).post(() -> {
-                    progressBar.setVisibility(View.VISIBLE);
-                });
+                new Handler(Looper.getMainLooper()).post(() -> progressBar.setVisibility(View.VISIBLE));
             }
         }).start();
     }
